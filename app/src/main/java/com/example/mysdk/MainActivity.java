@@ -14,8 +14,11 @@ public class MainActivity extends AppCompatActivity {
 
         String welcome = SdkUtils.getWelcomeMessage(this);
         String date = SdkUtils.getCurrentDate(this);
-        String version = SdkUtils.getAppVersion(this);
-        String message = welcome + "\n\nTarih: " + date + "\nVersiyon: " + version;
+        String licenseInfo = SdkUtils.getLicenseInfo(this);
+
+        String message = welcome +
+                "\n\nTarih: " + date +
+                "\n\nLisans Bilgileri:\n" + licenseInfo;
 
         TextView textView = findViewById(R.id.sdkMessageText);
         textView.setText(message);
